@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roboldo/screens/home_screen.dart';
+import 'package:roboldo/widgets/splash_screen.dart' show SplashScreen;
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Prancha de Comunicação',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const HomeScreen(),
+      title: 'Roboldo',
+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
+      home: const SplashScreen(),
     );
   }
 }
